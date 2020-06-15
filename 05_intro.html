@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Introduce</title>
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:400,300,700|Yesteryear" rel="stylesheet" type="text/css" />
+        <link href="./css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="/js/jquery-3.5.1.js"></script>
+        <script src="./js/mouse.js"></script>
+    </head>
+    <body>
+        <div id="menu-wrapper">
+            <div id="menu">
+                <ul>
+                    <li><a href="01_main.html">Homepage</a></li>
+                    <li class="current_page_item"><a href="./05_intro.html">Introduce</a></li>
+                    <li><a href="./02_favorite.html">Travel</a></li>
+                    <li><a href="./03_roadmap.html">Roadmap</a></li>
+                    <li><a href="./index.html">Logout</a></li>
+                </ul>
+            </div>
+            <!-- end #menu -->
+        </div>
+        <div id="header-wrapper">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="#">intro<span>duce</span></a></h1>
+                    <p>Hanna's page</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="wrapper">
+            <!-- end #header -->
+            <div id="page">
+                    <div id="content">
+                        <div id="me">
+                            <br><br>
+                            <h2 style="padding-left: 40px; display: inline;">하루 일과표</h2>
+                            <h2 style="padding-left: 130px; display: inline;">프로그래밍 언어</h2>
+                            <div id="piechart" style="position: absolute; top: 100px;left: 0px; z-index: 1;"></div>
+                            <div id="piechart2" style="position: absolute; top: 100px;left: 300px; z-index: 1;"></div>
+                                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                                
+                                <script type="text/javascript">
+                                // Load google charts
+                                google.charts.load('current', {'packages':['corechart']});
+                                google.charts.setOnLoadCallback(drawChart);
+
+                                // Draw the chart and set the chart values
+                                function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                    ['Task', 'Hours per Day'],
+                                ['Class', 6],
+                                ['Eat', 2],
+                                ['Phone', 3],
+                                ['Study', 2],
+                                ['Sleep', 7],
+                                ['Pet',1]
+                            ]);
+
+                                // Optional; add a title and set the width and height of the chart
+                                var options = {'width':300, 'height':200};
+
+                                // Display the chart inside the <div> element with id="piechart"
+                                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                chart.draw(data, options);
+                                }
+                                </script>
+
+                                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                                
+                                 <script type="text/javascript">
+                                 // Load google charts
+                                 google.charts.load('current', {'packages':['corechart']});
+                                 google.charts.setOnLoadCallback(drawChart);
+ 
+                                 // Draw the chart and set the chart values
+                                 function drawChart() {
+                                 var data = google.visualization.arrayToDataTable([
+                                     ['Task', 'Hours per Day'],
+                                 ['JAVA', 6],
+                                 ['SQL', 4],
+                                 ['HTML', 3],
+                                 ['CSS', 2],
+                                 ['JAVASCRIPT', 2],
+                                 ['C/C++',1]
+                             ]);
+ 
+                                 // Optional; add a title and set the width and height of the chart
+                                 var options = {'width':300, 'height':200, 'padding':20};
+ 
+                                 // Display the chart inside the <div> element with id="piechart"
+                                 var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+                                 chart.draw(data, options);
+                                 }
+                                 </script>
+                        <img src="./images/char.png" style="width: 300px; height: 550px; position: relative; left: 150px; z-index: 0;">
+                        <img src="./images/캡처.PNG" style="width: 100%; height: 100px; display: block;">
+                        <br><br> 
+                        <h2 style="padding-left: 80px;display: inline;">흥미유형</h2>
+                        <h2 style="padding-left: 180px;display: inline;">MBTI</h2>
+                        <img src="./images/흥미.PNG" style="width: 300px; height: 250px; display: inline-block;">       
+                        <img src="./images/캡처2.PNG" style="width: 300px; height: 250px; display: inline-block;">       
+                        </div>
+                        <div id="favorite">
+                            <div class="post">
+                                <h2 class="title">Pengsoo</a></h2>
+                                <br>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <div class="box" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng1.PNG" onclick="window.open('https://www.youtube.com/channel/UCtckgmUcpzqGnzcs7xEqMzQ','new','width=800,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">
+                                    </div>
+                                    <div class="box" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng2.PNG" onclick="window.open('pengsoo.html','new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">
+                                       
+                                    </div>
+                                    <div class="box" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng3.PNG" onclick="window.open('https://smartstore.naver.com/icons/category/0b965f1bfd8f4ff3b93f9d279518841d?cp=1','new','width=800,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="post post-alt">
+                                <h2 class="title">FOOD</a></h2>
+                                <br>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <div class="box2" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/h.jpg" onclick="window.open('https://place.map.kakao.com/2103052913' ,'new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                    <div class="box2" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/i.jpg" onclick="window.open('https://place.map.kakao.com/14557175','new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                    <div class="box2" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/y.jpg" onclick="window.open('https://place.map.kakao.com/949959332','new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                    <div class="box2" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/d.jpg" onclick="window.open('https://place.map.kakao.com/588867706','new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <h2 class="title">GAME</a></h2>
+                                <br>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <div class="box" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/ran.jpg" onclick="window.open('https://play.google.com/store/apps/details?id=com.percent.royaldice' ,'new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                    <div class="box" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/call.jpg" onclick="window.open('https://play.google.com/store/apps/details?id=com.tencent.tmgp.kr.codm&hl=ko','new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                    <div class="box" style="background: #BDBDBD;">
+                                        <img class="profile" src="./images/peng/m.jpg" onclick="window.open('https://play.google.com/store/apps/details?id=com.nexon.nsc.maplem','new','width=600,height=600,left=0,top=100,scrollbars=yes');" style="cursor:pointer">)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pets">
+                            <h2 class="title">Photo</h2>
+                            <div id="photo">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_01.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_02.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_03.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_04.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_05.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_06.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_07.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_08.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_09.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_10.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_11.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_12.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_13.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935_14.jpg">
+                                <img src="./images/pet/KakaoTalk_20200614_181257935.jpg">
+                            </div>
+                            <style>
+                                #photo{
+                                    width:100%;
+                                    height:300px;
+                                    white-space:nowrap;
+                                    overflow-x:scroll;
+                                }
+                                #photo img{
+                                    width:200px;
+                                    height:100%;
+                                }
+                            </style>
+                            <div id="video">
+                                <br><br>
+                                <h2>Video</h2>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Qx9Ucn25FKk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                    <!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Introduce</h2>
+							<ul>
+								<li id="1"><a href="#">Me</a></li>
+								<li id="2"><a href="#">Favorite</a></li>
+								<li id="3"><a href="#">Pets</a></li>
+                                <br>
+                                <br>
+							</ul>
+						</li>
+						
+						</li>
+					</ul>
+				</div>
+                       
+            </div>     
+            
+        </div> 
+    </body>
+    <script>
+        
+        $(document).ready(function() {
+            $('#me').show(); 
+            $('#favorite').hide(); 
+            $('#pets').hide(); 
+         $('#1').click(function(){ 
+            $('#me').show(); 
+            $('#favorite').hide(); 
+            $('#pets').hide();
+            return false;
+            });
+         $('#2').click(function(){ 
+            $('#favorite').show(); 
+            $('#me').hide(); 
+            $('#pets').hide();
+            return false;
+            });
+         $('#3').click(function(){ 
+            $('#pets').show();
+            $('#favorite').hide(); 
+            $('#me').hide(); 
+            return false;
+            }); 
+                
+        });
+    </script> 
+</html>             

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Travel</title>
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans:400,300,700|Yesteryear" rel="stylesheet" type="text/css" />
+        <link href="./css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="/js/jquery-3.5.1.js"></script>
+        <script src="./js/mouse.js"></script>
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#page2{
+
+	overflow: hidden;
+	width: 940px;
+	margin: 0px auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: orange;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+    </head>
+    <body>
+        <div id="menu-wrapper">
+            <div id="menu">
+                <ul>
+                    <li><a href="01_main.html">Homepage</a></li>
+                    <li><a href="./05_intro.html">Introduce</a></li>
+                    <li class="current_page_item"><a href="./02_favorite.html">Travel</a></li>
+                    <li><a href="./03_roadmap.html">Roadmap</a></li>
+                    <li><a href="./index.html">Logout</a></li>
+                </ul>
+            </div>
+            <!-- end #menu -->
+        </div>
+        <div id="header-wrapper">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="#">tra<span>vel</span></a></h1>
+                    <p>Hanna's page</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="wrapper">
+            <!-- end #header -->
+            <div id="page2">
+                    <div id="content" style="height: 1400px;">
+                        <div id="re">
+                            <div class="post">
+                                <h2 class="title">Travel Record</a></h2>
+                            </div>    
+                            <div class="timeline">
+                                <div class="container left">
+                                  <div class="content" id="ct1">
+                                    <h2>2017</h2>
+                                    <ul>
+                                        <li>PHILIPPINES</li>
+                                        <li>THAILAND</li>
+                                    </ul>
+                                  </div>
+                                  <div id="a" style="display: none;">
+                                    <img src="./images/travel/201701.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201702.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201703.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201704.jpg" style="width: 100px; height: 100px;">
+                                  </div>
+                                  
+                                </div>
+                                <div class="container right">
+                                  <div class="content" id="ct2">
+                                    <h2>2018</h2>
+                                    <ul>
+                                        <li>JAPAN</li>
+                                        <li>TAIWAN</li>
+                                        <li>PHILIPPINES</li>
+                                    </ul>
+                                  </div>
+                                  <div id="b" style="display: none;">
+                                    <img src="./images/travel/201801.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201802.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201803.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201804.jpg" style="width: 100px; height: 100px;">
+                                  </div>
+                                </div>
+                                <div class="container left">
+                                  <div class="content" id="ct3">
+                                    <h2>2019</h2>
+                                    <ul>
+                                        <li>INDONESIA</li>
+                                        <li>THAILAND</li>
+                                        <li>VIETNAM</li>
+                                        <li>MALAYSIA</li>
+                                        <li>TURKEY</li>
+                                    </ul>
+                                  </div>
+                                  <div id="c" style="display: none;">
+                                    <img src="./images/travel/201901.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201902.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201903.jpg" style="width: 100px; height: 100px;">
+                                    <img src="./images/travel/201904.jpg" style="width: 100px; height: 100px;">
+                                  </div>
+                                </div>
+                                
+                              </div>
+                        </div>
+                        <div id="pre">
+                            <div class="post">
+                                <h2 style="font-size: 3em;">APPLICATION</h2>
+                                <h2 class="title"><a href="#">트리플</a></h2>
+                                <br>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <img src="./images/tripple.png" style="width: 100px; height: 100px;">
+                                    <ul>
+                                        <li><p>세계 200개 도시무료 가이드 : 여행마다 매번 사야 했던 가이드북
+                                            이제 무료로 보는 트리플 가이드로
+                                            보다 자세하게, 깔끔하게</p></li>
+                                        <li><p>날씨, 환율, 길찾기, 번역, 시차계산 : 필요할 때마다 찾아 헤매던 녀석들
+                                            이제 주머니 하나에 쏙 담아 언제든 쓱 꺼내보면 끝</p></li>
+                                    </ul>
+                                    <p class="links"><a href="https://triple.guide/intro/" class="button">Read More</a></p>
+                                </div>
+                            </div>
+                            <div class="post post-alt">
+                                <h2 class="title"><a href="#">투어팁스</a></h2>
+                                <br>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <img src="./images/투어팁스.png" style="width: 100px; height: 100px;">
+                                    <ul>
+                                        <li><p> 52개 도시의 최신 여행정보를 제공합니다.</p></li>
+                                        <li><p> 무료로 가이드북을 제공하여 비행기에서도 볼 수 있습니다.</p></li>
+                                    </ul>
+                                    <p class="links"><a href="http://www.tourtips.com/" class="button">Read More</a></p>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <h2 class="title"><a href="#">트립스토어 </a></h2>
+                                <br>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <img src="./images/트립스토어.jpg" style="width: 100px; height: 100px;">
+                                    <ul>
+                                        <li><p>위에 두어플이 자유여행이라면 트립스토어는 패키지여행</p></li>
+                                        <li><p>전세계 200만개, 모든 여행사 패키지여행 한번에 비교가능</p></li>
+                                    </ul>
+                                    <p class="links"><a href="https://www.tripstore.kr/#/" class="button">Read More</a></p>
+                                </div>
+                            </div>
+                            <div style="clear: both;">&nbsp;</div>
+                        </div>
+                        
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                    <!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Travel</h2>
+							<ul>
+								<li id="1"><a href="#">Record</a></li>
+								<li id="2"><a href="#">Preparation for travel</a></li>
+                                <br><br><br><br><br><br>
+							</ul>
+						</li>
+						
+						</li>
+					</ul>
+				</div>
+                       
+            </div>     
+            
+        </div> 
+    </body>
+    <script>
+        $('#ct1').on('mouseenter',function(){
+            $('#a').show(1000);
+        }).on("mouseleave", function(){
+            $('#a').hide(1000);
+        });
+
+        $('#ct2').on('mouseenter',function(){
+            $('#b').show(1000);
+        }).on("mouseleave", function(){
+            $('#b').hide(1000);
+        });
+
+        $('#ct3').on('mouseenter',function(){
+            $('#c').show(1000);
+        }).on("mouseleave", function(){
+            $('#c').hide(1000);
+        });  
+
+        $(document).ready(function() {
+            $('#re').show(); 
+            $('#pre').hide(); 
+         $('#1').click(function(){ 
+            $('#re').show(); 
+            $('#pre').hide(); 
+            return false;
+            });
+         $('#2').click(function(){ 
+            $('#pre').show(); 
+            $('#re').hide(); 
+            return false;
+            });
+                
+        });
+    </script>  
+    
+</html>             
